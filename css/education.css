@@ -1,0 +1,154 @@
+.education {
+  background-color: #141414;
+}
+
+.education__title {
+  color: #000;
+}
+
+.education__container {
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.75rem;
+}
+
+.education__description {
+  color: #a3a3a3;
+  max-width: 40ch;
+}
+
+.education__description > span {
+  color: #fff;
+  font-weight: 700;
+}
+
+.education__qualifications {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.qualifications::before {
+  content: "";
+  background: linear-gradient(180deg, #29AEDB 0%, #0A4ADD 100%);
+  width: 4px;
+  height: 20px;
+  position: absolute;
+  top: 18px;
+  left: -5px;
+}
+
+.qualifications {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background: #090909;
+  position: relative;
+}
+
+.qualifications__type {
+  display: block;
+  color: #a3a3a3;
+  font-size: 0.875rem;
+  line-height: 1.25;
+}
+
+.qualifications__name {
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.56;
+  padding-bottom: 2.5rem;
+}
+
+.qualifications__institution {
+  display: block;
+  color: #a3a3a3;
+  font-size: 1.125rem;
+  line-height: 20px;
+  align-self: end;
+}
+
+.education__skills {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.skills__courses__title::before {
+  content: "";
+  background: url(../img/cursos.svg) no-repeat;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: -7px;
+  left: -40px;
+}
+
+.skills__courses__title {
+  color: #8f8f8f;
+  font-size: 0.875rem;
+  font-weight: 700;
+  position: relative;
+}
+
+.skills__languages__title::before {
+  content: "";
+  background: url(../img/idiomas.svg) no-repeat;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: -7px;
+  left: -40px;
+}
+
+.skills__languages__title {
+  color: #8f8f8f;
+  font-size: 0.875rem;
+  font-weight: 700;
+  position: relative;
+}
+
+.skills__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.courses__item {
+  color: #fff;
+  font-size: 1.125rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item__detail {
+  color: #8f8f8f;
+}
+
+@media (max-width: 1000px) {
+  .education__qualifications {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 800px) {
+  .education__qualifications {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+
+  .skills__courses__title::before {
+    display: none;
+  }
+  .skills__languages__title::before {
+    display: none;
+  }
+}

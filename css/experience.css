@@ -1,0 +1,129 @@
+.experience {
+  align-items: start;
+}
+
+.experience__title {
+  color: #e0e0e0;
+}
+
+.experience__description {
+  max-width: 40ch;
+  margin-bottom: 3.75rem;
+}
+
+.experience__description > span {
+  font-weight: 700;
+  color: #141414;
+}
+
+.company__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.experience__company::before {
+  content: "";
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(180deg, #29AEDB 0%, #0A4ADD 100%);
+  position: absolute;
+  top: 18px;
+  left: -4px;
+}
+
+.experience__company {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 60px;
+  position: relative;
+}
+
+.company__year {
+  display: block;
+  color: #525252;
+  position: absolute;
+  top: 20px;
+  left: -80px;
+}
+
+.company__title {
+  grid-area: 1 / 1;
+  color: #000;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.company__description {
+  grid-area: 2 / 1;
+  font-size: 0.875rem;
+  max-width: 35ch;
+}
+
+.company__position {
+  grid-area: 1 / 2;
+  display: block;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.25;
+}
+
+.position__skills {
+  grid-area: 2 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills__item {
+  font-size: 0.875rem;
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+@media (max-width: 1000px) {
+  .company__year {
+    position: relative;
+    top: 5px;
+    left: 0px;
+  }
+  .experience__description {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .company__year {
+    position: relative;
+    top: 2px;
+    left: 0px;
+  }
+
+  .company__title {
+    font-size: 1rem;
+  }
+
+  .company__description {
+    font-size: 0.75rem;
+  }
+
+  .company__position {
+    font-size: 0.79rem;
+  }
+
+  .position__skills {
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+  }
+
+  .skills__item {
+    font-size: 0.75rem;
+  }
+}
